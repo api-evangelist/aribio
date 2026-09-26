@@ -1,23 +1,65 @@
 aid: aribio
+
 name: AriBio
-description: 'AriBio is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.imweb.me/upload/S2026062357464fa378127/b10f0909e84f2.png
+
+description: "AriBio, operating under the ARIBIO Group, integrates biotechnology, artificial intelligence, and energy/data center infrastructure technologies to drive Korea's future core industries. The company aims to become a next‑generation global platform group, merging bio‑tech and AI for innovative solutions across healthcare, energy, and digital infrastructure."
+
 url: https://raw.githubusercontent.com/api-evangelist/aribio/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- Biotechnology
+- Artificial-Intelligence
+- Energy
+- Data-Center
+- Korea
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/aribio-hosts.yml
+- type: Vendors
+  url: vendors/aribio-vendors.yml
+- type: DomainSecurity
+  url: security/aribio-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://aribiogroup.com/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-26'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://www.nasdaqprivatemarket.com/
+    status: 200
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
